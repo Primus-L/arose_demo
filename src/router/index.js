@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import EasyHPC from '@/views/EasyHPC.vue'
+import SHCS from '@/views/SHCS.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -14,6 +15,11 @@ const routes = [
     path:'/easyhpc',
     name:'EasyHPC',
     component:EasyHPC
+  },
+  {
+    path:'/appcenter',
+    name:'AppCenter',
+    component:SHCS
   }
   
 ]

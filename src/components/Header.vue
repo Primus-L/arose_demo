@@ -7,10 +7,10 @@
                 </el-link>
         </el-col>
         <el-col :span="9">
-            <el-menu :default-active="activeIndex"  mode="horizontal">
-                <el-menu-item index="1">首页</el-menu-item>
-                <el-menu-item index="2">超算习堂</el-menu-item>
-                <el-menu-item index="3">资源购买</el-menu-item>
+            <el-menu :default-active="activeIndex"  mode="horizontal" :router=true>
+                <el-menu-item index="/">首页</el-menu-item>
+                <el-menu-item index="/easyhpc" >超算习堂</el-menu-item>
+                <el-menu-item index="/appcenter">资源购买</el-menu-item>
                 <el-menu-item index="4">作业提交</el-menu-item>
             </el-menu>
         </el-col>
@@ -30,10 +30,13 @@
         name:"Header",
         data(){
             return{
-                activeIndex:"1",
+                activeIndex:"/",
                 logo_url:require("@/assets/logo-plugin.png"),
             };
         },
+        mounted(){
+
+        }
     
     }
 </script>
