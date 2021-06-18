@@ -11,7 +11,7 @@
                 <el-menu-item index="/">首页</el-menu-item>
                 <el-menu-item index="/easyhpc" >超算习堂</el-menu-item>
                 <el-menu-item index="/appcenter">资源购买</el-menu-item>
-                <el-menu-item index="4">作业提交</el-menu-item>
+                <el-menu-item index="/jobsubmit">作业提交</el-menu-item>
             </el-menu>
         </el-col>
     </el-row>

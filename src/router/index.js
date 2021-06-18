@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import EasyHPC from '@/views/EasyHPC.vue'
 import SHCS from '@/views/SHCS.vue'
+import JobSubmit from '@/views/JobSubmit.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -20,6 +21,11 @@ const routes = [
     path:'/appcenter',
     name:'AppCenter',
     component:SHCS
+  },
+  {
+    path:'/jobsubmit',
+    name:'JobSubmit',
+    component:JobSubmit
   }
   
 ]

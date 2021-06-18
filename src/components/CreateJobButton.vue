@@ -1,25 +1,48 @@
+
 <template>
-    <el-button @click="create"></el-button>
+    <el-button @click="create">新建作业</el-button>
 </template>
 <script>
+    /* eslint-disable */
     import CreateJobForm from './CreateJobForm.vue'
     export default{
         name:'CreateJobButton',
         components:{
             CreateJobForm,
         },
+        data(){
+            return{
+                sub_status:false,
+            }
+        },
         methods:{
-            create:function(){
+            create(){
                 const h = this.$createElement;
                 this.$msgbox({
                     title:'新建作业',
-                    message:h('p',null,[
-                        h('CreateJobForm',null,null)
-                    ]),
-                    shouwCancelButton:true,
+                    message:h('CreateJobForm',{ref:'CreateJobForm',v-on:""}),
+                    showCancelButton: true,
                     confirmButtonText:'确定',
                     cancelButtonText:'取消',
+                    beforeClose:(action,instance,done)=>{
+                        if(action === 'confirm'){
+                            instance.confirmButtonLoading = true;
+                            instance.confirmButtonText = '提交中..';
+                            this.sub_status = false;
+                            this.$refs.CreateJobForm.submitForm();
+                            if(this.sub_status)
+                                done();
+                            instance.confirmButtonLoading = false;
+                        }
+                        else{
+                            done();
+                        }
+                        this.$refs.CreateJobForm.resetForm();
+                    }
                 })
+            },
+            setSubStatus(status){
+                this.sub_status = status
             }
         }
     }

@@ -33,7 +33,7 @@
                 rules:{
                     name:[
                         {required:true,message:'请输入作业名称',trigger:'blur'},
-                        {min:3,max:30,message:'长度在3到30字符',trigger},
+                        {min:3,max:30,message:'长度在3到30字符',trigger:'blur'},
                         {pattern:/^[\u4e00-\u9fa5a-zA-Z0-9.-:_~=]+$/,message:'作业名中不允许出现特殊字符',trigger:'blur'}
                     ],
                     description:[
@@ -48,6 +48,22 @@
                 }
             }
         },
+        methods:{
+            submitForm(){
+                this.$refs['CreateJobForm'].validate((valid) => {
+                   if(valid){
+                        console.log('submit!');
+                        this.$emit('setSubStatus',true);
+                   } else{
+                        alert('error!');
+                        return false;
+                   }
+                });
+            },
+            resetForm(){
+                this.$refs['CreateJobForm'].resetFields();
+            }
+        }
     }
 
 </script>
