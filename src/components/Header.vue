@@ -7,7 +7,7 @@
                 </el-link>
         </el-col>
         <el-col :span="9">
-            <el-menu :default-active="activeIndex"  mode="horizontal" :router=true>
+            <el-menu :default-active="this.$route.path"  mode="horizontal" :router=true>
                 <el-menu-item index="/">首页</el-menu-item>
                 <el-menu-item index="/easyhpc" >超算习堂</el-menu-item>
                 <el-menu-item index="/appcenter">资源购买</el-menu-item>
@@ -30,12 +30,11 @@
         name:"Header",
         data(){
             return{
-                activeIndex:"/",
                 logo_url:require("@/assets/logo-plugin.png"),
             };
         },
         mounted(){
-
+            console.log(this.$route.path)
         }
     
     }

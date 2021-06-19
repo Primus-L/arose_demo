@@ -1,6 +1,6 @@
 <template>
     <div class="EasyHPC">
-      <iframe v-resize="{log:true}" width="100%" frameborder="0" scrolling="auto" src="https://easyhpc.net/course"></iframe>
+      <iframe v-resize="{log:true}" width="100%" frameborder="0" scrolling="yes" src="https://easyhpc.net/course"></iframe>
     </div>
 </template>
 <style scoped>

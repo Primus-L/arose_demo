@@ -23,6 +23,6 @@ export default {
 <style scoped>
 .el-main{
     width: 60%;
-    margin: 20px auto 0 auto;
+    margin: 0 auto;
   }
 </style>

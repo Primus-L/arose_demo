@@ -55,7 +55,7 @@
                         console.log('submit!');
                         this.$emit('setSubStatus',true);
                    } else{
-                        alert('error!');
+                        //alert('error!');
                         return false;
                    }
                 });

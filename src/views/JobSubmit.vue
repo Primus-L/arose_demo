@@ -1,12 +1,12 @@
 <template>
-    <CreateJobButton></CreateJobButton>
+    <JobList></JobList>
 </template>
 <script>
-import CreateJobButton from '../components/CreateJobButton.vue'
+    import JobList from "@/components/JobList.vue"
     export default{
         name:'JobSubmit',
         components:{
-            CreateJobButton,
+            JobList
         }
 
     }
