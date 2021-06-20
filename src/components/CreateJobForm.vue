@@ -16,6 +16,8 @@
             <el-select v-model="ruleForm.cluster">
                 <el-option label="天河一号" value="天河一号"></el-option>
                 <el-option label="天河三号原型机" value="天河三号原型机"></el-option>
+                <el-option label="广州超算" value="广州超算"></el-option>
+                <el-option label="北航高性能计算平台" value="北航高性能计算平台"></el-option>
             </el-select>
         </el-form-item>
     </el-form>
