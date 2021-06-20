@@ -3,7 +3,7 @@
         <el-col :span="5" :offset="5">
                 <el-link :underline="false" style="font-size:18px;">
                     <el-image :src=logo_url fit="contain"></el-image>
-                    聚合资源运行支撑环境
+                    Arose demo
                 </el-link>
         </el-col>
         <el-col :span="9">

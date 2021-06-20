@@ -20,7 +20,7 @@
                 const h = this.$createElement;
                 this.$msgbox({
                     title:'新建作业',
-                    message:h('CreateJobForm',{ref:'CreateJobForm',on:{setSubStatus:'setSubStatus'}}),
+                    message:h('CreateJobForm',{ref:'CreateJobForm',on:{jobSubmit:this.jobSubmit}}),
                     showCancelButton: true,
                     confirmButtonText:'确定',
                     cancelButtonText:'取消',
@@ -44,8 +44,11 @@
                     }
                 })
             },
-            setSubStatus(status){
-                this.sub_status = status
+            jobSubmit(job){
+                this.sub_status = job.status;
+                if(job.status){
+                    this.$emit('addJob',job.info);
+                }
             }
         }
     }

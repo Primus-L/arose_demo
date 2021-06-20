@@ -4,6 +4,8 @@ import Home from '../views/Home.vue'
 import EasyHPC from '@/views/EasyHPC.vue'
 import SHCS from '@/views/SHCS.vue'
 import JobSubmit from '@/views/JobSubmit.vue'
+import JobList from '@/views/JobList.vue'
+import JobInfo from '@/views/JobInfo.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -25,12 +27,24 @@ const routes = [
   {
     path:'/jobsubmit',
     name:'JobSubmit',
-    component:JobSubmit
+    component:JobSubmit,
+    children:[
+      {
+        path:'',
+        component:JobList,
+      },
+      {
+        path:':jobId',
+        component:JobInfo,
+        name:'JobInfo'
+      }
+    ]
   }
   
 ]
 
 const router = new VueRouter({
+  mode: 'history',
   routes
 })
 

@@ -8,13 +8,13 @@
         </el-form-item>
         <el-form-item label="作业类型" prop="type">
             <el-select v-model="ruleForm.type">
-                <el-option label="科学计算" value="sci"></el-option>
-                <el-option label="物理" value="physics"></el-option>
+                <el-option label="科学计算" value="科学计算"></el-option>
+                <el-option label="物理" value="物理"></el-option>
             </el-select>
         </el-form-item>
         <el-form-item label="集群" prop="cluster">
             <el-select v-model="ruleForm.cluster">
-                <el-option label="Test" value="test"></el-option>
+                <el-option label="Test" value="Test"></el-option>
             </el-select>
         </el-form-item>
     </el-form>
@@ -53,7 +53,7 @@
                 this.$refs['CreateJobForm'].validate((valid) => {
                    if(valid){
                         console.log('submit!');
-                        this.$emit('setSubStatus',true);
+                        this.$emit('jobSubmit',{status:true,info:this.ruleForm});
                    } else{
                         //alert('error!');
                         return false;

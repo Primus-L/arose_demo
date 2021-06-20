@@ -1,13 +1,8 @@
 <template>
-    <JobList></JobList>
+    <router-view></router-view>
 </template>
 <script>
-    import JobList from "@/components/JobList.vue"
     export default{
         name:'JobSubmit',
-        components:{
-            JobList
-        }
-
     }
 </script>
