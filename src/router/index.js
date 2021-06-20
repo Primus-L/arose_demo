@@ -3,9 +3,9 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import EasyHPC from '@/views/EasyHPC.vue'
 import SHCS from '@/views/SHCS.vue'
-import JobSubmit from '@/views/JobSubmit.vue'
-import JobList from '@/views/JobList.vue'
-import JobInfo from '@/views/JobInfo.vue'
+const JobSubmit = () => import ('@/views/JobSubmit.vue')
+const JobList = () => import( '@/views/JobList.vue')
+const JobInfo =() => import('@/views/JobInfo.vue')
 Vue.use(VueRouter)
 
 const routes = [
