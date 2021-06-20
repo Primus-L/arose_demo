@@ -45,7 +45,7 @@
                     jobType:'科学计算',
                     jobStatus:'正在执行',
                     date:"2021-6-20 10:00:00",
-                    cluster:'Test',
+                    cluster:'天河三号原型机',
                     jobDescription:'这是作业简介'
                 }
             }

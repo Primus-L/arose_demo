@@ -14,7 +14,8 @@
         </el-form-item>
         <el-form-item label="集群" prop="cluster">
             <el-select v-model="ruleForm.cluster">
-                <el-option label="Test" value="Test"></el-option>
+                <el-option label="天河一号" value="天河一号"></el-option>
+                <el-option label="天河三号原型机" value="天河三号原型机"></el-option>
             </el-select>
         </el-form-item>
     </el-form>
